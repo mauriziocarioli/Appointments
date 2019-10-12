@@ -49,27 +49,27 @@
     <dmn:description>The patient is admitted</dmn:description>
     <dmn:variable id="_34CBF5C1-8BC3-49CD-BEFF-CAC3F34831DC" name="is admitted" typeRef="boolean"/>
   </dmn:inputData>
+  <dmn:decision id="_B72DCF95-38B5-4F75-8CEF-17661FE063F9" name="Decision-1">
+    <dmn:variable id="_4CB7157D-0007-41A3-A74A-0F5113738A32" name="Decision-1"/>
+    <dmn:informationRequirement id="_F026F769-CDBC-4889-976B-DC1AE919F724">
+      <dmn:requiredInput href="#_7013329D-5C0F-45A7-869A-88C1C09EC3DE"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_B7040F92-4AB4-4FFD-9909-EC03D7441801">
+      <dmn:requiredInput href="#_EAFAB2CB-6F06-4B9A-A6F4-7FD7956D6C0D"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_9DA6ED04-9EB5-4BBA-B383-C0F85BEE02E1">
+      <dmn:requiredInput href="#_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_A48AD7F0-FD4C-4B34-BD8E-85882D8F1C01">
+      <dmn:text>age > 65,is pregnant,has disability</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
   <dmn:inputData id="_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2" name="has disability">
     <dmn:variable id="_0D168D33-B793-4E07-B1AE-5D819854D666" name="has disability" typeRef="boolean"/>
   </dmn:inputData>
   <dmn:inputData id="_EAFAB2CB-6F06-4B9A-A6F4-7FD7956D6C0D" name="is pregnant">
     <dmn:variable id="_7E86963F-9B0C-4996-ADCB-FCF990D5E66B" name="is pregnant" typeRef="boolean"/>
   </dmn:inputData>
-  <dmn:decision id="_222028A9-7CCD-4F88-897A-9FB8B4FEDC30" name="Decision-1">
-    <dmn:variable id="_CC106AD5-F7FE-4206-8E00-E494E5A78551" name="Decision-1" typeRef="boolean"/>
-    <dmn:informationRequirement id="_33065F1F-990C-4F38-B5B3-B9029D463C93">
-      <dmn:requiredInput href="#_7013329D-5C0F-45A7-869A-88C1C09EC3DE"/>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement id="_D428735F-6497-4933-9686-5D13EE2E8F9C">
-      <dmn:requiredInput href="#_EAFAB2CB-6F06-4B9A-A6F4-7FD7956D6C0D"/>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement id="_10362E45-EC7F-4817-8835-073CDA8C032F">
-      <dmn:requiredInput href="#_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2"/>
-    </dmn:informationRequirement>
-    <dmn:literalExpression id="_37E7A62E-4096-4EB1-9236-03D23F3C5808">
-      <dmn:text>age > 65 | age &lt; 10</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
   <dmn:inputData id="_423914A8-C8B0-4373-8672-B0DED3235A22" name="appointment scheduled">
     <dmn:description>The patient has scheduled an appointment</dmn:description>
     <dmn:variable id="_9E533840-571A-49E2-8313-5AC32F9163C5" name="appointment scheduled" typeRef="boolean"/>
@@ -93,7 +93,7 @@
             <kie:width>100.0</kie:width>
             <kie:width>100.0</kie:width>
           </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_37E7A62E-4096-4EB1-9236-03D23F3C5808">
+          <kie:ComponentWidths dmnElementRef="_A48AD7F0-FD4C-4B34-BD8E-85882D8F1C01">
             <kie:width>130.0</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
@@ -134,6 +134,15 @@
         <dc:Bounds x="394" y="596" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_B72DCF95-38B5-4F75-8CEF-17661FE063F9" dmnElementRef="_B72DCF95-38B5-4F75-8CEF-17661FE063F9" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="272" y="285" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_423914A8-C8B0-4373-8672-B0DED3235A22" dmnElementRef="_423914A8-C8B0-4373-8672-B0DED3235A22" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -150,15 +159,6 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="265" y="596" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_222028A9-7CCD-4F88-897A-9FB8B4FEDC30" dmnElementRef="_222028A9-7CCD-4F88-897A-9FB8B4FEDC30" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="272" y="282" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_7013329D-5C0F-45A7-869A-88C1C09EC3DE" dmnElementRef="_7013329D-5C0F-45A7-869A-88C1C09EC3DE" isCollapsed="false">
@@ -182,17 +182,17 @@
         <di:waypoint x="444" y="596"/>
         <di:waypoint x="316" y="549"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_33065F1F-990C-4F38-B5B3-B9029D463C93" dmnElementRef="_33065F1F-990C-4F38-B5B3-B9029D463C93">
-        <di:waypoint x="235.5981308411215" y="401"/>
-        <di:waypoint x="272" y="307"/>
+      <dmndi:DMNEdge id="dmnedge-_F026F769-CDBC-4889-976B-DC1AE919F724" dmnElementRef="_F026F769-CDBC-4889-976B-DC1AE919F724">
+        <di:waypoint x="185.5981308411215" y="376"/>
+        <di:waypoint x="322" y="335"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_D428735F-6497-4933-9686-5D13EE2E8F9C" dmnElementRef="_D428735F-6497-4933-9686-5D13EE2E8F9C">
+      <dmndi:DMNEdge id="dmnedge-_B7040F92-4AB4-4FFD-9909-EC03D7441801" dmnElementRef="_B7040F92-4AB4-4FFD-9909-EC03D7441801">
         <di:waypoint x="321" y="376"/>
-        <di:waypoint x="322" y="332"/>
+        <di:waypoint x="322" y="335"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_10362E45-EC7F-4817-8835-073CDA8C032F" dmnElementRef="_10362E45-EC7F-4817-8835-073CDA8C032F">
+      <dmndi:DMNEdge id="dmnedge-_9DA6ED04-9EB5-4BBA-B383-C0F85BEE02E1" dmnElementRef="_9DA6ED04-9EB5-4BBA-B383-C0F85BEE02E1">
         <di:waypoint x="456" y="376"/>
-        <di:waypoint x="322" y="332"/>
+        <di:waypoint x="322" y="335"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
