@@ -34,25 +34,112 @@
       <dmn:typeRef>boolean</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
+  <dmn:decision id="_AC5BB27F-4924-45C3-BFB9-342C5D15C95F" name="Offer to cancel">
+    <dmn:variable id="_7B645FD6-09ED-48E5-A4C5-A4DA4F4B908C" name="Offer to cancel" typeRef="boolean"/>
+    <dmn:informationRequirement id="_F922AB82-FB15-455E-82B5-BBE3A3A32718">
+      <dmn:requiredInput href="#_DDE224B2-770B-43EF-B0A5-2F044DB27884"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_9D480D29-B8FC-4974-AD49-C90754C43103" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_3EB55393-DE01-49B7-B3F5-17B37A12B689">
+        <dmn:inputExpression id="_A939D06D-8BE2-487F-9413-597CFBF295FA" typeRef="number">
+          <dmn:text>a patient.age</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_47A8E666-1D46-4FD6-A0B5-F40C6CA73F42">
+        <dmn:inputExpression id="_024D2D2F-00ED-458A-9D66-D9B5507BABD1" typeRef="boolean">
+          <dmn:text>a patient.appointment.facility.has valet service</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_8BB90164-E73A-4483-88AC-5D6A068DE659">
+        <dmn:inputExpression id="_56848E1F-478B-4081-B1DC-18C7EB2C6A50" typeRef="boolean">
+          <dmn:text>a patient.appointment.is scheduled</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_E4454B6A-5ED4-4750-9A9B-21D9AFDE502C">
+        <dmn:inputExpression id="_B2AC21FD-0170-4761-A467-84317E5C391B" typeRef="date">
+          <dmn:text>a patient.appointment.scheduled date</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_9B05E73C-9975-4B70-9FCE-DD1BAA7F1E63">
+        <dmn:inputExpression id="_8492C018-341A-4580-8894-A8A52E844180" typeRef="boolean">
+          <dmn:text>a patient.has disability</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_1166B902-94BB-4B94-8CB1-E4F69F2BC95F">
+        <dmn:inputExpression id="_68F651A1-42AC-4904-9668-BFEFFFFF588A" typeRef="boolean">
+          <dmn:text>a patient.has used portal</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_0A76719C-E4C5-4D63-BFE3-E38BBFCB15FA">
+        <dmn:inputExpression id="_AB717978-9F41-43C3-87FF-8D3AEF504943" typeRef="boolean">
+          <dmn:text>a patient.is admitted</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_BD9BFB32-04B3-4716-A3FF-84A336B42BDC">
+        <dmn:inputExpression id="_0543DF57-3594-41D9-8780-FC1F4EF5CB4C" typeRef="boolean">
+          <dmn:text>a patient.is pregnant</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_60A6D18F-D10D-430C-89BE-4830E60C447F">
+        <dmn:inputExpression id="_FB582BC4-C90E-4957-8431-F8D6314E189F" typeRef="boolean">
+          <dmn:text>a patient.notify patient of valet services</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_B5A665F5-5801-42CB-9549-3C288F34149A" typeRef="boolean"/>
+      <dmn:rule id="_394CB9E5-C0AB-469C-9FA7-8A4ADF4D68EA">
+        <dmn:inputEntry id="_1AB54B9B-3101-4306-B712-488A9C9BE38C">
+          <dmn:text></dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9A9BCEE4-38EA-4961-9DC1-FA9C83647867">
+          <dmn:text></dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_38C43629-5933-445D-ACF7-7302C8E9D520">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_65084398-CD4E-4D68-B8E4-B05C3B07A573">
+          <dmn:text></dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7FC3CD77-1E4D-4E86-84D1-6691BDE03954">
+          <dmn:text></dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F225802F-75A5-45C5-ABAC-74634032024D">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ECEDAB8E-6B6C-4EEA-961E-AB92D6A22DB9">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A4FA2FE0-AFBD-47E4-B91E-D72E28B18E8F">
+          <dmn:text></dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EE988D5A-B03F-457A-8EEF-C2A559AB8080">
+          <dmn:text></dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_FEBDB389-A745-4E46-81C9-7CAEDA560992">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
   <dmn:inputData id="_DDE224B2-770B-43EF-B0A5-2F044DB27884" name="a patient">
     <dmn:variable id="_F578820E-4578-4476-AF22-9537864A341A" name="a patient" typeRef="Patient"/>
   </dmn:inputData>
-  <dmn:decision id="_A9C929F1-2D47-43A1-B597-670BF2E80D91" name="Offer to cancel">
-    <dmn:question>Should we offer the patient to cancel the appointment?</dmn:question>
-    <dmn:variable id="_CF275013-75F7-44D8-A34C-EA25D52B9A63" name="Offer to cancel" typeRef="boolean"/>
-    <dmn:informationRequirement id="_0C8150A6-9E31-4A78-B27D-C153A8D2BA1A">
-      <dmn:requiredInput href="#_DDE224B2-770B-43EF-B0A5-2F044DB27884"/>
-    </dmn:informationRequirement>
-    <dmn:literalExpression id="_9265212B-8682-4329-8224-6FEE7ADA5E93">
-      <dmn:text>a patient.appointment.is scheduled &amp;&amp; a patient.has used the portal</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_9265212B-8682-4329-8224-6FEE7ADA5E93">
-            <kie:width>497.0</kie:width>
+          <kie:ComponentWidths dmnElementRef="_9D480D29-B8FC-4974-AD49-C90754C43103">
+            <kie:width>50.0</kie:width>
+            <kie:width>116.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>266.0</kie:width>
+            <kie:width>246.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
@@ -65,7 +152,7 @@
         <dc:Bounds x="158" y="547" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_A9C929F1-2D47-43A1-B597-670BF2E80D91" dmnElementRef="_A9C929F1-2D47-43A1-B597-670BF2E80D91" isCollapsed="false">
+      <dmndi:DMNShape id="dmnshape-_AC5BB27F-4924-45C3-BFB9-342C5D15C95F" dmnElementRef="_AC5BB27F-4924-45C3-BFB9-342C5D15C95F" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
@@ -74,7 +161,7 @@
         <dc:Bounds x="338" y="547" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNEdge id="dmnedge-_0C8150A6-9E31-4A78-B27D-C153A8D2BA1A" dmnElementRef="_0C8150A6-9E31-4A78-B27D-C153A8D2BA1A">
+      <dmndi:DMNEdge id="dmnedge-_F922AB82-FB15-455E-82B5-BBE3A3A32718" dmnElementRef="_F922AB82-FB15-455E-82B5-BBE3A3A32718">
         <di:waypoint x="258" y="572"/>
         <di:waypoint x="338" y="572"/>
       </dmndi:DMNEdge>
