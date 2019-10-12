@@ -67,7 +67,7 @@
       <dmn:requiredInput href="#_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_37E7A62E-4096-4EB1-9236-03D23F3C5808">
-      <dmn:text>age > 65</dmn:text>
+      <dmn:text>age > 65, age &lt; 10</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_423914A8-C8B0-4373-8672-B0DED3235A22" name="appointment scheduled">
