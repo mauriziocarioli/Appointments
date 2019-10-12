@@ -49,8 +49,8 @@
     <dmn:description>The patient is admitted</dmn:description>
     <dmn:variable id="_34CBF5C1-8BC3-49CD-BEFF-CAC3F34831DC" name="is admitted" typeRef="boolean"/>
   </dmn:inputData>
-  <dmn:decision id="_B72DCF95-38B5-4F75-8CEF-17661FE063F9" name="Decision-1">
-    <dmn:variable id="_4CB7157D-0007-41A3-A74A-0F5113738A32" name="Decision-1"/>
+  <dmn:decision id="_B72DCF95-38B5-4F75-8CEF-17661FE063F9" name="Assistance is needed">
+    <dmn:variable id="_4CB7157D-0007-41A3-A74A-0F5113738A32" name="Assistance is needed"/>
     <dmn:informationRequirement id="_F026F769-CDBC-4889-976B-DC1AE919F724">
       <dmn:requiredInput href="#_7013329D-5C0F-45A7-869A-88C1C09EC3DE"/>
     </dmn:informationRequirement>
