@@ -34,6 +34,9 @@
       <dmn:typeRef>boolean</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
+  <dmn:inputData id="_DDE224B2-770B-43EF-B0A5-2F044DB27884" name="a patient">
+    <dmn:variable id="_F578820E-4578-4476-AF22-9537864A341A" name="a patient" typeRef="Patient"/>
+  </dmn:inputData>
   <dmn:decision id="_A9C929F1-2D47-43A1-B597-670BF2E80D91" name="Offer to cancel">
     <dmn:question>Should we offer the patient to cancel the appointment?</dmn:question>
     <dmn:variable id="_CF275013-75F7-44D8-A34C-EA25D52B9A63" name="Offer to cancel" typeRef="boolean"/>
@@ -41,12 +44,9 @@
       <dmn:requiredInput href="#_DDE224B2-770B-43EF-B0A5-2F044DB27884"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_9265212B-8682-4329-8224-6FEE7ADA5E93">
-      <dmn:text>a patient.appointment.is scheduled and a patient.has used the portal and a patient.is admitted</dmn:text>
+      <dmn:text>a patient.appointment.is scheduled</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:inputData id="_DDE224B2-770B-43EF-B0A5-2F044DB27884" name="a patient">
-    <dmn:variable id="_F578820E-4578-4476-AF22-9537864A341A" name="a patient" typeRef="Patient"/>
-  </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
@@ -56,15 +56,6 @@
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape id="dmnshape-_A9C929F1-2D47-43A1-B597-670BF2E80D91" dmnElementRef="_A9C929F1-2D47-43A1-B597-670BF2E80D91" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="338" y="547" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_DDE224B2-770B-43EF-B0A5-2F044DB27884" dmnElementRef="_DDE224B2-770B-43EF-B0A5-2F044DB27884" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -72,6 +63,15 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="158" y="547" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_A9C929F1-2D47-43A1-B597-670BF2E80D91" dmnElementRef="_A9C929F1-2D47-43A1-B597-670BF2E80D91" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="338" y="547" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-_0C8150A6-9E31-4A78-B27D-C153A8D2BA1A" dmnElementRef="_0C8150A6-9E31-4A78-B27D-C153A8D2BA1A">
