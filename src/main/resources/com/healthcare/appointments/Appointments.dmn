@@ -44,7 +44,7 @@
       <dmn:requiredInput href="#_DDE224B2-770B-43EF-B0A5-2F044DB27884"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_9265212B-8682-4329-8224-6FEE7ADA5E93">
-      <dmn:text>a patient.appointment.is scheduled and a patient.has used the portal</dmn:text>
+      <dmn:text>a patient.appointment.is scheduled &amp;&amp; a patient.has used the portal</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmndi:DMNDI>
