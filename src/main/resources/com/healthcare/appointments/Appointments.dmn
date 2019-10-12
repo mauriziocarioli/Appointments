@@ -34,51 +34,14 @@
       <dmn:typeRef>boolean</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:decision id="_8ED68DFA-290C-47AA-972F-36D3FA7F89F4" name="is admitted">
-    <dmn:question>Is the patient currently admitted?</dmn:question>
-    <dmn:variable id="_684007B1-8776-4BA1-B063-C994AA0921E8" name="is admitted" typeRef="boolean"/>
-    <dmn:informationRequirement id="_2FD5BB24-4718-4C10-90FC-872CC7AEBC0F">
-      <dmn:requiredDecision href="#_9063D25D-59EF-4EA0-829E-5B783AB6C042"/>
-    </dmn:informationRequirement>
-    <dmn:literalExpression/>
-  </dmn:decision>
-  <dmn:decision id="_E2A073D9-15B4-4499-8084-C58E2956C40C" name="has scheduled an appointment">
-    <dmn:variable id="_ED2D061D-0D1D-4695-BDC3-42131D67BF3A" name="has scheduled an appointment" typeRef="boolean"/>
-    <dmn:informationRequirement id="_0FC0AB01-8FE6-42E0-AC41-3D42DF4EBAB0">
-      <dmn:requiredInput href="#_DDE224B2-770B-43EF-B0A5-2F044DB27884"/>
-    </dmn:informationRequirement>
-    <dmn:literalExpression id="_2F3109BF-B1BC-4810-80AC-387EB378DB20">
-      <dmn:text>patient.appointment.is scheduled</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_9063D25D-59EF-4EA0-829E-5B783AB6C042" name="has used the portal">
-    <dmn:variable id="_2091D647-156F-4CE7-8851-CFC230EB3092" name="has used the portal" typeRef="boolean"/>
-    <dmn:informationRequirement id="_DD8741AB-B95E-4717-9B5C-7AAA7EF868DB">
-      <dmn:requiredDecision href="#_E2A073D9-15B4-4499-8084-C58E2956C40C"/>
-    </dmn:informationRequirement>
-    <dmn:literalExpression/>
-  </dmn:decision>
   <dmn:inputData id="_DDE224B2-770B-43EF-B0A5-2F044DB27884" name="a patient">
     <dmn:variable id="_F578820E-4578-4476-AF22-9537864A341A" name="a patient" typeRef="Patient"/>
   </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
-        <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_2F3109BF-B1BC-4810-80AC-387EB378DB20">
-            <kie:width>130.0</kie:width>
-          </kie:ComponentWidths>
-        </kie:ComponentsWidthsExtension>
+        <kie:ComponentsWidthsExtension/>
       </di:extension>
-      <dmndi:DMNShape id="dmnshape-_E2A073D9-15B4-4499-8084-C58E2956C40C" dmnElementRef="_E2A073D9-15B4-4499-8084-C58E2956C40C" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="338" y="547" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_DDE224B2-770B-43EF-B0A5-2F044DB27884" dmnElementRef="_DDE224B2-770B-43EF-B0A5-2F044DB27884" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -88,36 +51,6 @@
         <dc:Bounds x="158" y="547" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_9063D25D-59EF-4EA0-829E-5B783AB6C042" dmnElementRef="_9063D25D-59EF-4EA0-829E-5B783AB6C042" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="518" y="547" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_8ED68DFA-290C-47AA-972F-36D3FA7F89F4" dmnElementRef="_8ED68DFA-290C-47AA-972F-36D3FA7F89F4" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="698" y="547" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNEdge id="dmnedge-_0FC0AB01-8FE6-42E0-AC41-3D42DF4EBAB0" dmnElementRef="_0FC0AB01-8FE6-42E0-AC41-3D42DF4EBAB0">
-        <di:waypoint x="258" y="572"/>
-        <di:waypoint x="338" y="572"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_DD8741AB-B95E-4717-9B5C-7AAA7EF868DB" dmnElementRef="_DD8741AB-B95E-4717-9B5C-7AAA7EF868DB">
-        <di:waypoint x="438" y="572"/>
-        <di:waypoint x="518" y="572"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_2FD5BB24-4718-4C10-90FC-872CC7AEBC0F" dmnElementRef="_2FD5BB24-4718-4C10-90FC-872CC7AEBC0F">
-        <di:waypoint x="618" y="572"/>
-        <di:waypoint x="698" y="572"/>
-      </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </dmn:definitions>
