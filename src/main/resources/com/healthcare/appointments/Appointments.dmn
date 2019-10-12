@@ -36,12 +36,13 @@
   </dmn:itemDefinition>
   <dmn:decision id="_A9C929F1-2D47-43A1-B597-670BF2E80D91" name="Offer to cancel">
     <dmn:question>Should we offer the patient to cancel the appointment?</dmn:question>
-    <dmn:allowedAnswers>yes,no</dmn:allowedAnswers>
-    <dmn:variable id="_CF275013-75F7-44D8-A34C-EA25D52B9A63" name="Offer to cancel" typeRef="string"/>
+    <dmn:variable id="_CF275013-75F7-44D8-A34C-EA25D52B9A63" name="Offer to cancel" typeRef="boolean"/>
     <dmn:informationRequirement id="_0C8150A6-9E31-4A78-B27D-C153A8D2BA1A">
       <dmn:requiredInput href="#_DDE224B2-770B-43EF-B0A5-2F044DB27884"/>
     </dmn:informationRequirement>
-    <dmn:literalExpression/>
+    <dmn:literalExpression id="_9265212B-8682-4329-8224-6FEE7ADA5E93">
+      <dmn:text>a patient.appointment.is scheduled and a patient.has used the portal and a patient.is admitted</dmn:text>
+    </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_DDE224B2-770B-43EF-B0A5-2F044DB27884" name="a patient">
     <dmn:variable id="_F578820E-4578-4476-AF22-9537864A341A" name="a patient" typeRef="Patient"/>
@@ -49,7 +50,11 @@
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
-        <kie:ComponentsWidthsExtension/>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_9265212B-8682-4329-8224-6FEE7ADA5E93">
+            <kie:width>497.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-_A9C929F1-2D47-43A1-B597-670BF2E80D91" dmnElementRef="_A9C929F1-2D47-43A1-B597-670BF2E80D91" isCollapsed="false">
         <dmndi:DMNStyle>
