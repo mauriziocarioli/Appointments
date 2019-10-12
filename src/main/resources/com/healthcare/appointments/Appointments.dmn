@@ -61,7 +61,7 @@
       <dmn:requiredInput href="#_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_A48AD7F0-FD4C-4B34-BD8E-85882D8F1C01">
-      <dmn:text>age > 65,is pregnant,has disability</dmn:text>
+      <dmn:text>age > 65,pregnant,disability</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:decision id="_2FDC0DE2-6110-4409-BAA3-D55BFBD1AEA8" name="Offer valet service">
@@ -118,11 +118,11 @@
     <dmn:description>The patient has used the portal</dmn:description>
     <dmn:variable id="_E5526057-81F3-4715-BED1-8AD73A8DFA37" name="has used portal" typeRef="boolean"/>
   </dmn:inputData>
-  <dmn:inputData id="_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2" name="has disability">
-    <dmn:variable id="_0D168D33-B793-4E07-B1AE-5D819854D666" name="has disability" typeRef="boolean"/>
+  <dmn:inputData id="_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2" name="disability">
+    <dmn:variable id="_0D168D33-B793-4E07-B1AE-5D819854D666" name="disability" typeRef="boolean"/>
   </dmn:inputData>
-  <dmn:inputData id="_EAFAB2CB-6F06-4B9A-A6F4-7FD7956D6C0D" name="is pregnant">
-    <dmn:variable id="_7E86963F-9B0C-4996-ADCB-FCF990D5E66B" name="is pregnant" typeRef="boolean"/>
+  <dmn:inputData id="_EAFAB2CB-6F06-4B9A-A6F4-7FD7956D6C0D" name="pregnant">
+    <dmn:variable id="_7E86963F-9B0C-4996-ADCB-FCF990D5E66B" name="pregnant" typeRef="boolean"/>
   </dmn:inputData>
   <dmn:inputData id="_423914A8-C8B0-4373-8672-B0DED3235A22" name="appointment scheduled">
     <dmn:description>The patient has scheduled an appointment</dmn:description>
