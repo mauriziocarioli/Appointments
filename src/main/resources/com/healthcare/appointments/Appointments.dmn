@@ -74,8 +74,8 @@
   <dmn:inputData id="_EAFAB2CB-6F06-4B9A-A6F4-7FD7956D6C0D" name="is pregnant">
     <dmn:variable id="_7E86963F-9B0C-4996-ADCB-FCF990D5E66B" name="is pregnant" typeRef="boolean"/>
   </dmn:inputData>
-  <dmn:decision id="_83487894-382C-4113-A974-DE300F87E368" name="Decision-1">
-    <dmn:variable id="_C08BF90A-4B30-4D3B-849D-F96D568E93F6" name="Decision-1" typeRef="date"/>
+  <dmn:decision id="_83487894-382C-4113-A974-DE300F87E368" name="appointment is tomorrow">
+    <dmn:variable id="_C08BF90A-4B30-4D3B-849D-F96D568E93F6" name="appointment is tomorrow" typeRef="boolean"/>
     <dmn:informationRequirement id="_543BB4B7-5978-4631-A69F-95ACD3F6C4DF">
       <dmn:requiredInput href="#_C20DA6BA-AD9E-40F9-BB2D-242A61A8139D"/>
     </dmn:informationRequirement>
