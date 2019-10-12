@@ -34,8 +34,8 @@
       <dmn:typeRef>boolean</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:inputData id="_DDE224B2-770B-43EF-B0A5-2F044DB27884" name="a patient">
-    <dmn:variable id="_F578820E-4578-4476-AF22-9537864A341A" name="a patient" typeRef="Patient"/>
+  <dmn:inputData id="_DDE224B2-770B-43EF-B0A5-2F044DB27884" name="the patient">
+    <dmn:variable id="_F578820E-4578-4476-AF22-9537864A341A" name="the patient" typeRef="Patient"/>
   </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
