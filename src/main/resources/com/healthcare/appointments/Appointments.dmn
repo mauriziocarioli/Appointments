@@ -84,6 +84,15 @@
   </dmn:inputData>
   <dmn:decision id="_97F386A6-7ADB-4FDF-ABAD-4A08A5DEDE07" name="May need assistance">
     <dmn:variable id="_4B8B0C25-CB7D-4962-BFED-02F23DFFB4D9" name="May need assistance" typeRef="boolean"/>
+    <dmn:informationRequirement id="_B2CD6E82-FA4B-4161-AACA-4384E8400C4C">
+      <dmn:requiredInput href="#_7013329D-5C0F-45A7-869A-88C1C09EC3DE"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_07C16160-B6C2-41A1-82F5-3395873D55B5">
+      <dmn:requiredInput href="#_EAFAB2CB-6F06-4B9A-A6F4-7FD7956D6C0D"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_2E4267BC-09F6-418D-881C-26A197976201">
+      <dmn:requiredInput href="#_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2"/>
+    </dmn:informationRequirement>
     <dmn:literalExpression/>
   </dmn:decision>
   <dmn:inputData id="_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2" name="has disability">
@@ -200,6 +209,18 @@
       <dmndi:DMNEdge id="dmnedge-_2D961E86-8FDC-49D2-91CC-724651438DBF" dmnElementRef="_2D961E86-8FDC-49D2-91CC-724651438DBF">
         <di:waypoint x="444" y="596"/>
         <di:waypoint x="316" y="549"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_B2CD6E82-FA4B-4161-AACA-4384E8400C4C" dmnElementRef="_B2CD6E82-FA4B-4161-AACA-4384E8400C4C">
+        <di:waypoint x="185.5981308411215" y="376"/>
+        <di:waypoint x="321" y="332"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_07C16160-B6C2-41A1-82F5-3395873D55B5" dmnElementRef="_07C16160-B6C2-41A1-82F5-3395873D55B5">
+        <di:waypoint x="321" y="376"/>
+        <di:waypoint x="321" y="332"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_2E4267BC-09F6-418D-881C-26A197976201" dmnElementRef="_2E4267BC-09F6-418D-881C-26A197976201">
+        <di:waypoint x="456" y="376"/>
+        <di:waypoint x="321" y="332"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
