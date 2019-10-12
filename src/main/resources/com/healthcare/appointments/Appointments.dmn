@@ -41,7 +41,9 @@
     <dmn:informationRequirement id="_A73DEAF5-3138-4419-B488-CB0609994987">
       <dmn:requiredInput href="#_CE61A6AD-5771-4D8D-89C8-15C6654EFE4B"/>
     </dmn:informationRequirement>
-    <dmn:literalExpression/>
+    <dmn:literalExpression id="_0BC69736-2292-4BD9-827C-0A3F39818BC1">
+      <dmn:text>"yes"</dmn:text>
+    </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_CE61A6AD-5771-4D8D-89C8-15C6654EFE4B" name="the patient">
     <dmn:variable id="_B2EF19CF-E801-4135-AD31-055BF6EF3D47" name="the patient" typeRef="Any"/>
@@ -49,7 +51,11 @@
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
-        <kie:ComponentsWidthsExtension/>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_0BC69736-2292-4BD9-827C-0A3F39818BC1">
+            <kie:width>130.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-_CE61A6AD-5771-4D8D-89C8-15C6654EFE4B" dmnElementRef="_CE61A6AD-5771-4D8D-89C8-15C6654EFE4B" isCollapsed="false">
         <dmndi:DMNStyle>
