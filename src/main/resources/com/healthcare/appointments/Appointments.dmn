@@ -1,11 +1,78 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_1D743DD0-BFD7-4EED-9632-D0C7EB79291F" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_88F8C0C9-8B1B-4490-9B11-683B3BD71926" name="Appointments" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_1D743DD0-BFD7-4EED-9632-D0C7EB79291F">
   <dmn:extensionElements/>
+  <dmn:itemDefinition id="_1E0E0313-FB19-40C1-A087-7B7FBD13CD10" name="Patient" isCollection="false">
+    <dmn:itemComponent id="_A8C78DF9-F83B-44D3-A50F-6BB268E81AE9" name="appointment" isCollection="false">
+      <dmn:itemComponent id="_0DB1884F-E106-47E3-BB05-22DE3C39D3C7" name="facility" isCollection="false">
+        <dmn:itemComponent id="_2E7C29BE-B208-46FE-AD54-D6CCBDA09A84" name="has valet service" isCollection="false">
+          <dmn:typeRef>boolean</dmn:typeRef>
+        </dmn:itemComponent>
+      </dmn:itemComponent>
+      <dmn:itemComponent id="_51A36C93-DEDE-4E7C-92E4-E892709BA1E0" name="scheduled date" isCollection="false">
+        <dmn:typeRef>date</dmn:typeRef>
+      </dmn:itemComponent>
+      <dmn:itemComponent id="_1BD34582-D52E-4C44-A06F-C428056A3875" name="is scheduled" isCollection="false">
+        <dmn:typeRef>boolean</dmn:typeRef>
+      </dmn:itemComponent>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C96CC498-8106-460A-8667-FF59E7FF16CA" name="age" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_EC02A1A3-91E0-4836-B3E1-C736C306DD61" name="has disability" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_4B312BC0-F81E-4112-9B9E-9BD7188F6044" name="has used portal" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_AE83979B-344E-4AC8-A19F-4B6AA717DED1" name="is admitted" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C3CBA791-4ACA-4899-9D45-CC98E77C91B6" name="is pregnant" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_B86662DD-F721-4117-8927-63073945A3E8" name="notify patient of valet services" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:decision id="_A9C929F1-2D47-43A1-B597-670BF2E80D91" name="Offer to cancel">
+    <dmn:question>Should we offer the patient to cancel the appointment?</dmn:question>
+    <dmn:allowedAnswers>yes,no</dmn:allowedAnswers>
+    <dmn:variable id="_CF275013-75F7-44D8-A34C-EA25D52B9A63" name="Offer to cancel" typeRef="string"/>
+    <dmn:informationRequirement id="_0C8150A6-9E31-4A78-B27D-C153A8D2BA1A">
+      <dmn:requiredInput href="#_DDE224B2-770B-43EF-B0A5-2F044DB27884"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression/>
+  </dmn:decision>
+  <dmn:inputData id="_DDE224B2-770B-43EF-B0A5-2F044DB27884" name="a patient">
+    <dmn:variable id="_F578820E-4578-4476-AF22-9537864A341A" name="a patient" typeRef="Patient"/>
+  </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
         <kie:ComponentsWidthsExtension/>
       </di:extension>
+      <dmndi:DMNShape id="dmnshape-_A9C929F1-2D47-43A1-B597-670BF2E80D91" dmnElementRef="_A9C929F1-2D47-43A1-B597-670BF2E80D91" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="338" y="547" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_DDE224B2-770B-43EF-B0A5-2F044DB27884" dmnElementRef="_DDE224B2-770B-43EF-B0A5-2F044DB27884" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="158" y="547" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_0C8150A6-9E31-4A78-B27D-C153A8D2BA1A" dmnElementRef="_0C8150A6-9E31-4A78-B27D-C153A8D2BA1A">
+        <di:waypoint x="258" y="572"/>
+        <di:waypoint x="338" y="572"/>
+      </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </dmn:definitions>
