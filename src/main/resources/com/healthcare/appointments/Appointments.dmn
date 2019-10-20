@@ -15,17 +15,17 @@
     <dmn:decisionTable id="_47979876-2373-4EE3-8399-B66211C99231" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_5767A933-D194-4C73-BC38-B003D3C923BD">
         <dmn:inputExpression id="_61ADAA3B-2603-4231-80EF-25845FE53949" typeRef="boolean">
-          <dmn:text>scheduled appointment</dmn:text>
+          <dmn:text>patient has scheduled appointment</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_24EACC82-C0AC-4DA2-9F34-FBB93560B97C">
         <dmn:inputExpression id="_E7F5FE70-C9A9-4CED-8AA0-B8856C9EF05F" typeRef="boolean">
-          <dmn:text>has used portal</dmn:text>
+          <dmn:text>patient has used portal</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_6D27B892-DBF8-4ABF-ADF5-4E59D2B7D22B">
         <dmn:inputExpression id="_8976F06D-8531-42FB-9B3D-BF3A73930936" typeRef="boolean">
-          <dmn:text>is admitted</dmn:text>
+          <dmn:text>patient is admitted</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_9ABAC2A3-7ACF-478D-BA27-DF676D37B226" typeRef="boolean"/>
@@ -61,7 +61,7 @@
       <dmn:requiredInput href="#_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_A48AD7F0-FD4C-4B34-BD8E-85882D8F1C01">
-      <dmn:text>age > 65 or pregnant or disability</dmn:text>
+      <dmn:text>patient age > 65 or patient is pregnant or patient has a disability</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:decision id="_2FDC0DE2-6110-4409-BAA3-D55BFBD1AEA8" name="Offer valet service">
@@ -158,14 +158,14 @@
         <kie:ComponentsWidthsExtension>
           <kie:ComponentWidths dmnElementRef="_47979876-2373-4EE3-8399-B66211C99231">
             <kie:width>50.0</kie:width>
-            <kie:width>192.0</kie:width>
-            <kie:width>126.0</kie:width>
-            <kie:width>100.0</kie:width>
+            <kie:width>244.0</kie:width>
+            <kie:width>177.0</kie:width>
+            <kie:width>146.0</kie:width>
             <kie:width>100.0</kie:width>
             <kie:width>100.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_A48AD7F0-FD4C-4B34-BD8E-85882D8F1C01">
-            <kie:width>290.0</kie:width>
+            <kie:width>597.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_A552BD1C-65AB-4FAA-B248-876CCB6FC9A6">
             <kie:width>50.0</kie:width>
