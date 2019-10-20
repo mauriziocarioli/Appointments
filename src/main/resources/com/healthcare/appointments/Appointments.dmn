@@ -137,7 +137,7 @@
       <dmn:requiredInput href="#_817CB4E1-FEA9-4ED1-B809-A4651DC52759"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_7CCAEEBE-A333-4618-A28B-0F18C75E7A91">
-      <dmn:text>appointment date&lt;=today+duration("P2D")</dmn:text>
+      <dmn:text>appointment date-today&lt;=duration("P2D")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_C20DA6BA-AD9E-40F9-BB2D-242A61A8139D" name="appointment date">
