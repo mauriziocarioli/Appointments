@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_1D743DD0-BFD7-4EED-9632-D0C7EB79291F" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_88F8C0C9-8B1B-4490-9B11-683B3BD71926" name="Appointments" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_1D743DD0-BFD7-4EED-9632-D0C7EB79291F">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_1D743DD0-BFD7-4EED-9632-D0C7EB79291F" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_88F8C0C9-8B1B-4490-9B11-683B3BD71926" name="Appointments" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://healthcare.com/dmn/_1D743DD0-BFD7-4EED-9632-D0C7EB79291F">
   <dmn:extensionElements/>
   <dmn:decision id="_D252A1DF-AE76-48EF-9EE7-31EA40BBD201" name="Offer to cancel">
     <dmn:variable id="_B5848F72-A955-42CD-93A1-DC7B8204F523" name="Offer to cancel" typeRef="boolean"/>
@@ -45,9 +45,9 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:inputData id="_3F1D9689-5643-4C6D-9B83-9F4259C27C7F" name="is admitted">
+  <dmn:inputData id="_3F1D9689-5643-4C6D-9B83-9F4259C27C7F" name="patient is admitted">
     <dmn:description>The patient is admitted</dmn:description>
-    <dmn:variable id="_34CBF5C1-8BC3-49CD-BEFF-CAC3F34831DC" name="is admitted" typeRef="boolean"/>
+    <dmn:variable id="_34CBF5C1-8BC3-49CD-BEFF-CAC3F34831DC" name="patient is admitted" typeRef="boolean"/>
   </dmn:inputData>
   <dmn:decision id="_B72DCF95-38B5-4F75-8CEF-17661FE063F9" name="Assistance is needed">
     <dmn:variable id="_4CB7157D-0007-41A3-A74A-0F5113738A32" name="Assistance is needed" typeRef="boolean"/>
@@ -114,19 +114,19 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:inputData id="_5724B2F8-E365-42CC-9042-A526461A6F81" name="has used portal">
+  <dmn:inputData id="_5724B2F8-E365-42CC-9042-A526461A6F81" name="patient has used portal">
     <dmn:description>The patient has used the portal</dmn:description>
-    <dmn:variable id="_E5526057-81F3-4715-BED1-8AD73A8DFA37" name="has used portal" typeRef="boolean"/>
+    <dmn:variable id="_E5526057-81F3-4715-BED1-8AD73A8DFA37" name="patient has used portal" typeRef="boolean"/>
   </dmn:inputData>
-  <dmn:inputData id="_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2" name="disability">
-    <dmn:variable id="_0D168D33-B793-4E07-B1AE-5D819854D666" name="disability" typeRef="boolean"/>
+  <dmn:inputData id="_DD13C6E9-AD25-4484-8EFA-71B1858DC0B2" name="patient has a disability">
+    <dmn:variable id="_0D168D33-B793-4E07-B1AE-5D819854D666" name="patient has a disability" typeRef="boolean"/>
   </dmn:inputData>
-  <dmn:inputData id="_EAFAB2CB-6F06-4B9A-A6F4-7FD7956D6C0D" name="pregnant">
-    <dmn:variable id="_7E86963F-9B0C-4996-ADCB-FCF990D5E66B" name="pregnant" typeRef="boolean"/>
+  <dmn:inputData id="_EAFAB2CB-6F06-4B9A-A6F4-7FD7956D6C0D" name="patient is pregnant">
+    <dmn:variable id="_7E86963F-9B0C-4996-ADCB-FCF990D5E66B" name="patient is pregnant" typeRef="boolean"/>
   </dmn:inputData>
-  <dmn:inputData id="_423914A8-C8B0-4373-8672-B0DED3235A22" name="scheduled appointment">
+  <dmn:inputData id="_423914A8-C8B0-4373-8672-B0DED3235A22" name="patient has scheduled appointment">
     <dmn:description>The patient has scheduled an appointment</dmn:description>
-    <dmn:variable id="_9E533840-571A-49E2-8313-5AC32F9163C5" name="scheduled appointment" typeRef="boolean"/>
+    <dmn:variable id="_9E533840-571A-49E2-8313-5AC32F9163C5" name="patient has scheduled appointment" typeRef="boolean"/>
   </dmn:inputData>
   <dmn:decision id="_83487894-382C-4113-A974-DE300F87E368" name="appointment is tomorrow">
     <dmn:variable id="_C08BF90A-4B30-4D3B-849D-F96D568E93F6" name="appointment is tomorrow" typeRef="boolean"/>
@@ -146,8 +146,8 @@
   <dmn:inputData id="_7DCF86B5-3F64-40ED-B603-F292581D2626" name="facility has valet">
     <dmn:variable id="_F6961D0C-E23F-413C-8E58-91BEE14E391A" name="facility has valet" typeRef="boolean"/>
   </dmn:inputData>
-  <dmn:inputData id="_7013329D-5C0F-45A7-869A-88C1C09EC3DE" name="age">
-    <dmn:variable id="_F2FC402E-31EC-4E9F-9795-3DE2BA35849E" name="age" typeRef="number"/>
+  <dmn:inputData id="_7013329D-5C0F-45A7-869A-88C1C09EC3DE" name="patient age">
+    <dmn:variable id="_F2FC402E-31EC-4E9F-9795-3DE2BA35849E" name="patient age" typeRef="number"/>
   </dmn:inputData>
   <dmn:inputData id="_817CB4E1-FEA9-4ED1-B809-A4651DC52759" name="today">
     <dmn:variable id="_A4EF94B4-775D-4985-8D4F-CF019C9EFFFA" name="today" typeRef="date"/>
@@ -176,7 +176,7 @@
             <kie:width>100.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_7CCAEEBE-A333-4618-A28B-0F18C75E7A91">
-            <kie:width>309.0</kie:width>
+            <kie:width>400.0</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
