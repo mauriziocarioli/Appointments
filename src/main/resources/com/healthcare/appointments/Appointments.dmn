@@ -89,12 +89,12 @@
       </dmn:input>
       <dmn:input id="_3FD50FB0-7C53-4956-A466-620917FCB5BB">
         <dmn:inputExpression id="_E3C7617B-8D87-4C8D-B8AD-5FAE7E6BA6E8" typeRef="boolean">
-          <dmn:text>has used portal</dmn:text>
+          <dmn:text>patient has used portal</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_17409D61-5AA3-43BB-8EC0-FF920078C379">
         <dmn:inputExpression id="_1810C96D-F309-49F6-B533-DDBAF7A7AD2B" typeRef="boolean">
-          <dmn:text>scheduled appointment</dmn:text>
+          <dmn:text>patient has scheduled appointment</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_73D58C81-59D9-4204-8F7F-43C1B6DA0230" typeRef="boolean"/>
@@ -170,8 +170,8 @@
           <kie:ComponentWidths dmnElementRef="_A552BD1C-65AB-4FAA-B248-876CCB6FC9A6">
             <kie:width>50.0</kie:width>
             <kie:width>145.0</kie:width>
-            <kie:width>133.0</kie:width>
-            <kie:width>175.0</kie:width>
+            <kie:width>184.0</kie:width>
+            <kie:width>245.0</kie:width>
             <kie:width>145.0</kie:width>
             <kie:width>100.0</kie:width>
           </kie:ComponentWidths>
