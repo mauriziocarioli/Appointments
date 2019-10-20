@@ -133,7 +133,7 @@
       <dmn:requiredInput href="#_817CB4E1-FEA9-4ED1-B809-A4651DC52759"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_7CCAEEBE-A333-4618-A28B-0F18C75E7A91">
-      <dmn:text>appointment date&lt;=today+duration("P2D")</dmn:text>
+      <dmn:text>appointment date&lt;=today+duration("PT2D")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_423914A8-C8B0-4373-8672-B0DED3235A22" name="patient has scheduled appointment">
