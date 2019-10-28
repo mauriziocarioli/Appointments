@@ -9,7 +9,7 @@
   <name>Appointments</name>
   <description>Appointments Management in Health Care</description>
   <properties>
-    <version.org.kie>${version.org.kie}</version.org.kie>
+    <version.org.kie>7.23.0.Final-redhat-00003</version.org.kie>
   </properties>
   <dependencies>
     <dependency>
