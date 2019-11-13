@@ -1,5 +1,4 @@
-Appointments Management in Healthcare with DMN
-=======================
+= Appointments Management in Healthcare with DMN
 
 GET decision model:
 
@@ -8,6 +7,9 @@ http://localhost:8080/kie-server/services/rest/server/containers/Appointments_1.
 POST decision model execution request:
 
 http://localhost:8080/kie-server/services/rest/server/containers/Appointments_1.0.0-SNAPSHOT/dmn
+
+[source,JSON]
+----
 {
     "model-namespace": "https://healthcare.com/dmn/_1D743DD0-BFD7-4EED-9632-D0C7EB79291F",
     "model-name": "Appointments",
@@ -25,3 +27,4 @@ http://localhost:8080/kie-server/services/rest/server/containers/Appointments_1.
         "facility has valet": true
     }
 }
+----
